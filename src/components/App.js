@@ -1,11 +1,13 @@
-import './App.css';
-
+import "../styles/App.css";
+import Layout from "./Layout";
+import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-      <h2>Hello World, This is from React</h2>
+      <Layout>
+        <Home></Home>
+      </Layout>
     </div>
   );
 }
-
 export default App;
