@@ -1,17 +1,15 @@
 import classes from "../styles/Video.module.css";
-import Image from "../assets/images/3.jpg";
-import { Link } from "react-router-dom";
-export default function Video() {
+export default function Video({title, id, noq}) {
+  
+  const Image =  `http://img.youtube.com/vi/${id}/maxresdefault.jpg`;
   return (
-    <Link to="/quiz">
       <div className={classes.video}>
-        <img src={Image} alt="Video Player" />
-        <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+        <img src={Image} alt={title} />
+        <p>{title}</p>
         <div className={classes.qmeta}>
-          <p>10 Questions</p>
-          <p>Score : Not taken yet</p>
+          <p>{noq} Questions</p>
+          <p>Score : {noq * 5}</p>
         </div>
       </div>
-    </Link>
   );
 }

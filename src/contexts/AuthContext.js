@@ -5,7 +5,7 @@ import "../firebase";
 
 const AuthContext = React.createContext();
 export function useAuth(){
-    return useContext(AuthProvider);
+    return useContext(AuthContext);
 }
 
 export function AuthProvider({children}){
@@ -43,7 +43,7 @@ setCurrentUser({
 
 //login function
 function login(email, password){
-    const auth = getAuth;
+    const auth = getAuth();
     return signInWithEmailAndPassword(auth, email, password);
 }
 
