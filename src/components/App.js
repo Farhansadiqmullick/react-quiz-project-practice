@@ -21,8 +21,8 @@ function App() {
                 <Route path="/signup" element={ <PublicRoute><Signup /></PublicRoute>} />
                 <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
 
-                <Route path="/quiz" element={<PrivateRoute><Quiz></Quiz></PrivateRoute>} />
-                <Route path="/result" element={<PrivateRoute><Result></Result></PrivateRoute>} />
+                <Route path="/quiz/:id" element={<PrivateRoute><Quiz></Quiz></PrivateRoute>} />
+                <Route path="/result/:id" element={<PrivateRoute><Result></Result></PrivateRoute>} />
             </Routes>
           </Layout>
         </AuthProvider>

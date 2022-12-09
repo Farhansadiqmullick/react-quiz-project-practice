@@ -32,7 +32,7 @@ export default function useVideoList(page) {
         const snapshot = await get(videoQuery);
         setloading(false);
         if (snapshot.exists()) {
-          setVideos((preVideos) => {
+         setVideos((preVideos) => {
             return [...preVideos, ...Object.values(snapshot.val())];
           });
         } else {
