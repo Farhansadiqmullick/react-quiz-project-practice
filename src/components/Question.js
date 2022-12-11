@@ -7,7 +7,7 @@ export default function Question() {
         <span className="material-icons-outlined"> help_outline </span>
         Here goes the question from Learn with Sumit?
       </div>
-      <Answers></Answers>
+      <Answers input={false}></Answers>
     </div>
   );
 }
