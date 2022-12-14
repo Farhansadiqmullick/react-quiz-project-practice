@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import useAnswers from "../../hooks/useAnswers";
 import Analysis from "../Analysis";
 import Summary from "../Summary";
@@ -6,18 +6,12 @@ import _ from "lodash";
 
 export default function Result() {
   const { id } = useParams();
-  const navigate = useNavigate();
-  navigate(`/result/${videoId}`, {
-    state: {
-      qna,
-    },
-  });
   const { state } = useLocation();
-  const { qna } = state;
 
   const { loading, error, answers } = useAnswers(id);
 
   function calculate() {
+    let score = 0;
     answers.forEach((question, index1) => {
       let correctIndexes = [];
       let checkedIndexes = [];
@@ -26,7 +20,7 @@ export default function Result() {
         if (option.correct) {
           correctIndexes.push(index2);
         }
-        if (qna[index1].options[index2].checked) {
+        if (state[index1].options[index2].checked) {
           checkedIndexes.push(index2);
           option.checked = true;
         }

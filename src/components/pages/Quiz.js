@@ -82,10 +82,10 @@ export default function Quiz(){
             [id]: qna,
         });
 
-        navigate({
-            pathname: `result/${id}`,
-            state: {qna}
-        })
+        navigate(
+            `/result/${id}`,
+            {state: qna}
+        )
     }
     
 //calculate precentage of progress
@@ -99,7 +99,7 @@ return (
         <>
         <h1>{qna[currentQuestion].title}</h1>
         <h4>Question might have muliple answers</h4>
-        <Answers
+        <Answers input={true}
         options={qna[currentQuestion].options} handleChange={handleAnswerChange}
         ></Answers>
         <ProgressBar next={nextQuestion} prev={prevQuestion} submit={submit} progress={percentage}>

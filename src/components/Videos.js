@@ -21,16 +21,15 @@ export default function Videos() {
             </p>
           }
         >
-            {videos.map((video) =>
-            video.noq > 0 ? 
-              (<Link to={`quiz/${video.youtubeID}`} key={video.youtubeID}>
+          {videos.map((video) =>
+            video.noq > 0 ? (
+              <Link to={`quiz/${video.youtubeID}`} key={video.youtubeID}>
                 <Video
                   title={video.title}
                   id={video.youtubeID}
                   noq={video.noq}
                 ></Video>
               </Link>
-
             ) : (
               <Video
                 title={video.title}
@@ -39,11 +38,8 @@ export default function Videos() {
               ></Video>
             )
           )}
-        
-         </InfiniteScroll>
-      )
-      
-    }
+        </InfiniteScroll>
+      )}
       {!loading && videos.length === 0 && <div>No Data Found</div>}
       {error && <p className="error">There was an error</p>}
       {loading && <div>Loading...</div>}
