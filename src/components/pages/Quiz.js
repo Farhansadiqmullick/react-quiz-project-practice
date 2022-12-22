@@ -104,7 +104,7 @@ return (
         ></Answers>
         <ProgressBar next={nextQuestion} prev={prevQuestion} submit={submit} progress={percentage}>
         </ProgressBar>
-        <MiniPlayer/>
+        <MiniPlayer title={qna[currentQuestion].title} id={id}/>
         </>
      )
      }

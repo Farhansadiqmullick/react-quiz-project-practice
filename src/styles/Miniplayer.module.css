@@ -11,10 +11,8 @@
     border-radius: 5px;
   }
   
-  .miniPlayer img {
+  .miniPlayer .player{
     width: 300px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
     animation: miniplayerAnim 0.3s ease forwards;
   }
   
@@ -66,10 +64,10 @@
   }
   
   .floatingBtn {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     bottom: 80px;
-    right: 10px;
+    right:10px;
     overflow: hidden;
     border-radius: 50px;
     background-color: var(--fontPrimary);
@@ -105,6 +103,7 @@
   
   .floatingBtn .open {
     display: block;
+    margin-left: 10px;
   }
   
   .floatingBtn .close {
