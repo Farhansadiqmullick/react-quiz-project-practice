@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Project Live Link
+
+<h4 align="center">Deployed via Netlify: <a href="https://luxury-lamington-286fd3.netlify.app/">Live Link</a></h4>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
