@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Project Live Link
 
-<h4 align="center">Deployed via Netlify: <a href="https://luxury-lamington-286fd3.netlify.app/">Live Link</a></h4>
+<h4>Deployed via Netlify: <a target-"_blank" href="https://luxury-lamington-286fd3.netlify.app/">Live Link</a></h4>
 
 
 ## Available Scripts
